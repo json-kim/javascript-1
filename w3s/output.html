@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <p id="result">5+6 = ?</p>
+        <button id="btn1">innerHTML</button>
+        <button id="btn2">document.write</button>
+        <button id="btn3">window.alert</button>
+        <button id="btn4">console.log</button>
+        <script>
+            document.getElementById('btn1').addEventListener('click', function() {
+                document.getElementById('result').innerHTML = '11';
+            });
+            document.getElementById('btn2').addEventListener('click', function() {
+                document.write(5 + 6)
+            });
+            document.getElementById('btn3').addEventListener('click', function() {
+                window.alert(5 + 6);
+            });
+            document.getElementById('btn4').addEventListener('click', function() {
+                console.log(5 + 6);
+            });
+        </script>
+    </body>
+</html>

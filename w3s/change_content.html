@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button id="button">내용 바꾸기</button>
+        <p id="text">바뀌기 전 내용</p>
+        <script>
+            document.getElementById('button').addEventListener('click', function() {
+                document.getElementById('text').innerHTML = 'Clicked and Change';
+            });
+        </script>
+    </body>
+</html>

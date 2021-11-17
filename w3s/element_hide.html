@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <img id="image" src="html.png">
+        <br/>
+        <button id="hide_btn">숨기기</button>
+        <button id="show_btn">보여주기</button>
+        <script>
+            document.getElementById('hide_btn').addEventListener('click', function() {
+                document.getElementById('image').style.display = 'none';
+            });
+            document.getElementById('show_btn').addEventListener('click', function() {
+                document.getElementById('image').style.display = 'block';
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <img id="image" src="html.png">
+        <button id="html_btn">HTML</button>
+        <button id="css_btn">CSS</button>
+        <script>
+            document.getElementById('html_btn').addEventListener('click', function() {
+                document.getElementById('image').src = 'html.png';
+            });
+            document.getElementById('css_btn').addEventListener('click', function() {
+                document.getElementById('image').src = 'css.png';
+            });
+        </script>
+    </body>
+</html>
