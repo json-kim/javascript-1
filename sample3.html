@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button id="button">이름 입력</button><br/>
+        <p id="test"></p>
+
+        <script>
+            // document
+            //     .getElementById('button')
+            //     .addEventListener('click', function () {
+            //         buttonclick();
+            //     });
+
+            // function buttonclick() {
+            //     var value = prompt('이름을 입력해주세요');
+            //     document
+            //         .getElementById('test')
+            //         .innerHTML = value + "님 안녕하세요";
+            // }
+
+            var value = "";
+            
+            for (var i = 1; i <= 100; i++) {
+                value = value + i + '</br>';
+            }
+
+            document
+                .getElementById('test')
+                .innerHTML = value;
+            
+        </script>
+
+    </body>
+</html>

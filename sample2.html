@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        
+        <button onclick="study();">100 입력 받기</button> <br/>
+        <button id="getnumber">100 또 입력받기</button> <br/>
+        <a href="javascript:study();">링크로 100 입력받기</a>
+
+        <script>
+
+            function study() {
+                var value = prompt('100을 입력해 주세요');
+
+                if (value == "100") {
+                    alert('제대로 입력하셨습니다.');
+                } else {
+                    alert('100 이 아니라 ' + value + ' 이 입력되었습니다.');
+                    study();
+                }
+            }
+
+            document
+                .getElementById('getnumber')
+                .addEventListener(
+                    'click', // 어떤 이벤트인지
+                    function () { // 이벤트 발생시 실행 함수 (무기명함수)
+                        study();
+                    }
+                );
+
+            /*
+            var value = prompt("성함이 어떻게 되시나요?");
+            alert(value + "님 안녕하세요");
+
+            var value = confirm("안녕하신가요?"); // true / false
+            console.log(value);
+            console.log(typeof(value));
+
+            var i = 100;
+            var j = "300";
+            var k = i + j;
+
+            //console.log("변수 i에 들어간 값은 " + i + " 입니다.");
+            // console.log(typeof(i)); // number
+            // console.log(typeof(j)); // String
+            // console.log(typeof(k)); // String
+
+            var returni = myfunction(i);
+            var returnj = myfunction(j);
+            var returnk = myfunction(k);
+
+            console.log(returni);
+            console.log(returnj);
+            console.log(returnk);
+
+            function myfunction(value) {
+                console.log(typeof(value));
+                alert(value);
+
+                return value + " 의 타입은 " + typeof(value);
+
+                alert("끝"); // 실행되지 않음
+            }
+            */
+        </script>
+
+    </body>
+</html>
