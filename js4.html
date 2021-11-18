@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <input type="text" id="name" placeholder="이름을 입력하세요.">
+        <button id="btn">입력하기</button>
+        <br/>
+        <p id="result"></p>
+
+        <input type="text" id="input">
+
+        <script>
+
+            document.getElementById('btn').addEventListener('click', function () {
+                let result = document.getElementById('name').value;
+                document.getElementById('result').innerHTML = result + '님 안녕하세요.';
+            });
+        </script>
+    </body>
+</html>

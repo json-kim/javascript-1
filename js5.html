@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+        <style>
+            div{
+                display: inline-block;
+                text-align: center;
+                border: 1px solid black;
+                position: absolute;
+            }
+            .type1{
+                width: 400px;
+                height: 200px;
+                line-height: 200px;
+            }
+            .type2{
+                width: 200px;
+                height: 400px;
+                line-height: 400px;
+            }
+            #div1{
+                top: 0px;
+                left: 0px;
+                background-color: #0000FF;
+            }
+            #div2{
+                top: 0px;
+                left: 200px;
+                background-color: #00FF00;
+            }
+            #div3{
+                top: 200px;
+                left: 400px;
+                background-color: #ee22ff;
+            }
+            #div4{
+                top: 400px;
+                left: 0px;
+                background-color: #ff0000;
+            }
+            .image{
+                top: 200px;
+                left: 200px;
+                z-index: -1;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        
+    
+    </body>
+    <script>
+        document.write(`
+        <div class="type2" id="div1">1</div>
+        <div class="type1" id="div2">2</div>
+        <div class="type2" id="div3">3</div>
+        <div class="type1" id="div4">4</div>
+        <div class="image"><img width="200px" height="200px" src="bob.gif"></div>
+        `);
+    </script>
+</html>

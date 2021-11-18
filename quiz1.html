@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <p id="result_text">결과값</p>
+        <script>
+            const result = document.getElementById('result_text');
+
+            myNumber();
+
+            function myNumber() {
+                var n1 = prompt('숫자 1을 입력하세요.');
+                var n2 = prompt('숫자 2을 입력하세요.');
+
+                n1 = Number(n1);
+                n2 = Number(n2);
+
+                if (isNaN(n1) || isNaN(n2)) {
+                    alert('숫자만 입력해주세요.');
+                    myNumber();
+                } else {
+                    result.innerHTML = n1 + n2;
+                }
+            }
+        </script>
+    </body>
+</html>

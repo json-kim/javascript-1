@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <p id="text">아무런 값이 없습니다.</p>
+        <button id="btn">값을 넣어라!</button>
+        <script>
+            const btn = document.getElementById('btn');         // btn셀렉터
+            const text = document.getElementById('text');    // p셀렉터
+            
+            var number = 0;
+            btn.addEventListener('click', function() {
+                number++;
+                text.innerHTML = number;
+            });
+        </script>
+    </body>
+</html>

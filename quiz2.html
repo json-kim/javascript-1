@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button id="btn">숫자 입력받기</button>
+        <br/>
+        <p id="result_text">결과값</p>
+
+        <script>
+            const btn = document.getElementById('btn');
+            btn.addEventListener('click', function () {
+                myNumber();
+            });
+
+            const result_text = document.getElementById('result_text');
+
+            function myNumber() {
+                let n1 = prompt('숫자를 입력하세요.');
+                
+                n1 = Number(n1);
+
+                if (isNaN(n1)) {
+                    myNumber();
+                } else {
+                    var value = "";
+                    
+                    for (var i = 1; i <= n1; i++) {
+                        if (i % 3 == 0) {
+                            value = value + ' <span style="color:Red;">' + i + '</span>';
+                        } else {
+                            value = value + ' ' + i;
+                        }
+                    }
+
+                    result_text.innerHTML = value;
+                }
+
+            }
+        </script>
+    </body>
+</html>
