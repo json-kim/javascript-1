@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+        <style>
+            button{
+                width : 30%;
+                height: 100px;
+                font-size: large;
+            }
+            .grey{
+                color: white;
+                background-color: grey;
+                border-color: grey;
+            }
+            .white{
+                color: black;
+                background-color: white;
+                border-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="html" class="grey">html</button>
+        <button id="css" class="grey">css</button>
+        <button id="js" class="grey">javascript</button>
+
+        <script>
+            const html = document.getElementById('html');
+            const css = document.getElementById('css');
+            const js = document.getElementById('js');
+
+            html.addEventListener('click', function () {
+                changeWhite(html);
+                changeGrey(css);
+                changeGrey(js);
+            });
+            css.addEventListener('click', function () {
+                changeGrey(html);
+                changeWhite(css);
+                changeGrey(js);
+            });
+            js.addEventListener('click', function () {
+                changeGrey(html);
+                changeGrey(css);
+                changeWhite(js);
+            });
+            
+            function changeGrey(button) {
+                button.style.color = 'white';
+                button.style.backgroundColor = 'grey';
+                button.style.borderColor = 'grey';
+            }
+
+            function changeWhite(button) {
+                button.style.color = 'black';
+                button.style.backgroundColor = 'white';
+                button.style.borderColor = 'black';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <div align="center">
+            <button id="btn_name">이름 바꾸기</button>
+
+            <h1 id="name"></h1>
+
+            <div id="btn" style="display:none;">
+                <button id="red">빨강</button>
+                <button id="blue">파랑</button>
+                <button id="green">초록</button>
+            </div>
+        </div>
+
+        <script>
+            const name = document.getElementById('name');
+            const btn = document.getElementById('btn');
+
+            document
+                .getElementById('btn_name')
+                .addEventListener('click', function () {
+                    input();
+                });
+            document
+                .getElementById('red')
+                .addEventListener('click', function () {
+                    alert('빨간색으로 변경됩니다.');
+
+                    name.style.color = '#ff0000';
+                });
+            document
+                .getElementById('blue')
+                .addEventListener('click', function () {
+                    alert('파란색으로 변경됩니다.');
+
+                    name.style.color = '#0000ff';
+                });
+            document
+                .getElementById('green')
+                .addEventListener('click', function () {
+                    alert('초록색으로 변경됩니다.');
+
+                    name.style.color = '#00ff00';
+                });
+
+            function input() {
+                let value = prompt('이름을 입력해주세요');
+
+                console.log(value);
+
+                if (value.trim() == '') {
+                    alert('텍스트값을 입력해주세요');
+                    input();
+                } else {
+                    name.innerHTML = value;
+                    btn.style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>

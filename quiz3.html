@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <body>
+        <button id="btn">테이블 만들기!</button>
+
+    </body>
+    <script>
+        document
+            .getElementById('btn')
+            .addEventListener('click', function () {
+                input();
+            });
+
+        function input() {
+            let cols = prompt('몇 칸을 원하세요?');
+            let rows = prompt('몇 줄을 원하세요?');
+
+            cols = Number(cols);
+            rows = Number(rows);
+
+            if (isNaN(cols) || isNaN(rows)) {
+                alert('숫자를 입력해야 합니다.');
+                input();
+            } else if (cols <= 0 || rows <= 0) {
+                alert('줄, 칸은 0보다 커야 합니다.');
+                input();
+            } else {
+                makeTable(cols, rows);
+            }
+        }
+
+        function makeTable(cols, rows) {
+            console.log(cols + ' ' + rows);
+            let table = '<table border="1">';
+
+            for (var i = 0; i < rows; i++) {
+                table = table + '<tr>';
+
+                for (var j = 0; j < cols; j++) {
+                    table = table + '<td>' + j + '</td>';
+                }
+
+                table = table + '</tr>';
+            }
+
+            table = table + '</table>';
+
+            document.write(table);
+        }
+    </script>
+</html>
